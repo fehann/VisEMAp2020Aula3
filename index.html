@@ -30,7 +30,7 @@
 
 		ctx.fillStyle = "rgba(0, 200, 0, 0.3)";
 		for (var i = 0; i < 8; i++) {
-			ctx.fillRect(120+ i * 30, 10 + 10  * i, 20, 30 + 10 * i);
+			ctx.fillRect(120+ i * 30, 40 + 10  * i, 20, 90 - 10 * i);
 		}
 	</script>
 
@@ -51,30 +51,31 @@
 	<p>O SVG é uma especificação XML interpretada pelo padrão HTML5.
 	Portanto, podemos escrever o SVG diretamente no HTML para ser interpretado pelo browser.</p>
 
-	<svg id="linha">
+	<svg id="linha" width="300" height="180">
 	  <line
 		id="a_linha"
 	      x1="40" y1="30"
-	      x2="100" y2="30"
+	      x2="140" y2="30"
 		stroke="black"/>
 		<line
 		id="b_linha"
-	      x1="100" y1="30"
-	      x2="160" y2="30"
+	      x1="140" y1="30"
+	      x2="240" y2="30"
 		stroke="black"/>
 		<circle
 			id="ponto_inicial"
 			cx="40" cy="30" r="8"
 			fill="#529fca"
 			stroke="black" />
-		<circle
-			id="ponto_meio"
-			cx="100" cy="30" r="8"
+		<rect id="ponto_meio"
+			x="130" y="20"
+			rx="5" ry="5"
+			width="20" height="20"
 			fill="#529fca"
 			stroke="black"/>
 		<circle
 			id="ponto_final"
-			cx="160" cy="30" r="8"
+			cx="240" cy="30" r="8"
 			fill="#529fca"
 			stroke="black"/>
   </svg>
@@ -97,7 +98,7 @@
 	<!-- Um exemplo de vega -->
 	<h2>Visualização Vega</h2>
 
-	<p>Segue visualização interativa em Vega do quarteto de Anscombe do Trabalho 2.</p>
+	<p>Segue visualização interativa em Vega do quarteto de Anscombe do Trabalho 2. Referência utilizada para inserir a visualização Vega em HTML foi <a href="https://vega.github.io/vega-lite/usage/embed.html">este site</a>.</p>
 
 	<div id="vis"></div>
 
